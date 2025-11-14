@@ -2,12 +2,16 @@
 
 Application Flask qui affiche sur une carte Leaflet les services gratuits disponibles à Paris (défibrillateurs, fontaines à boire, toilettes publiques, hotspots Wi-Fi). Les données sont téléchargées depuis le portail Open Data Paris, nettoyées puis stockées dans MongoDB Atlas avant d’être exposées via l’API Flask.
 
+<img width="2533" height="1379" alt="Capture d&#39;écran 2025-11-14 095559" src="https://github.com/user-attachments/assets/4e819629-6963-43ad-bdc8-ac05e3752f54" />
+
 ## Fonctionnalités
 
 - Carte Leaflet interactive centrée sur Paris avec filtres par type de service.
 - Recherche d’une adresse parisienne (Nominatim) et affichage des points les plus proches grâce à `$geoNear`.
 - API REST simple : `/api/services` (GeoJSON pour chaque collection) et `/api/nearby`.
 - Scripts prêts à l’emploi pour télécharger et charger automatiquement les jeux de données Open Data Paris.
+
+<img width="2536" height="1384" alt="Capture d&#39;écran 2025-11-14 095732" src="https://github.com/user-attachments/assets/c65958bc-759b-42cc-a94e-d6dc4bb90289" />
 
 ## Stack
 
