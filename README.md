@@ -145,6 +145,11 @@ python scripts/load_data_to_mongo.py    # nettoie + charge dans MongoDB Atlas
 
 Le script de chargement vide chaque collection avant insertion, ajoute longitude/latitude et crée un index `GEOSPHERE` utilisé par l’endpoint `/api/nearby`.
 
+## Données chargées dans MongoDB Atlas
+
+<img width="2431" height="1196" alt="image" src="https://github.com/user-attachments/assets/f107827b-27f6-4c68-bea5-798219443cef" />
+
+
 ## Lancer l’application en local
 
 ```bash
