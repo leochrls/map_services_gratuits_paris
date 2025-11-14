@@ -13,6 +13,72 @@ Application Flask qui affiche sur une carte Leaflet les services gratuits dispon
 
 <img width="2536" height="1384" alt="Capture d&#39;écran 2025-11-14 095732" src="https://github.com/user-attachments/assets/c65958bc-759b-42cc-a94e-d6dc4bb90289" />
 
+### 🧭 Aperçu des informations affichées sur la carte
+
+Les différents services publics de Paris (défibrillateurs, fontaines, toilettes et bornes WiFi) sont affichés sur la carte avec une icône dédiée.  
+En cliquant sur un marqueur, une popup Leaflet s’ouvre avec les informations clés du point de service.
+
+---
+#### 🖼️ Exemples de popups
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+
+  <div>
+    <img src="images/debibrillateurs.png" alt="Défibrillateur" width="100%">
+  </div>
+
+  <div>
+    <img src="images/fontaines.png" alt="Fontaine" width="100%">
+  </div>
+
+  <div>
+    <img src="images/toilettes.png" alt="Toilettes" width="100%">
+  </div>
+
+  <div>
+    <img src="images/wifi.png" alt="WiFi" width="100%">
+  </div>
+
+</div>
+
+---
+#### 📝 Détails affichés dans chaque popup
+
+##### ❤️ Défibrillateurs
+- **adresse**  
+- **code postal**  
+- **commune**  
+- **complément d'information**  
+- **état de fonctionnement**  
+- **latitude / longitude**  
+- **nom du site**  
+- **type d’établissement**  
+
+##### 💧 Fontaines
+- **adresse / localisation**  
+- **commune**  
+- **disponible : Oui / Non**  
+- **latitude / longitude**  
+- **modèle de la fontaine**  
+
+##### 🚻 Toilettes
+- **adresse complète**  
+- **arrondissement**  
+- **horaires d’ouverture**  
+- **PMR : accessibilité handicapé**  
+- **relais bébé**  
+- **type (Sanisette, etc.)**  
+
+##### 📶 WiFi
+- **adresse complète**  
+- **nombre de bornes**  
+- **code postal**  
+- **état (Opérationnel / Hors service)**  
+- **latitude / longitude**  
+- **nom du site**  
+
+---
+
 ## Stack
 
 - Flask, Jinja2, python-dotenv (`run.py`, `app/__init__.py`, `app/config.py`).
