@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="layout">
+  <aside class="controls">
+    <form id="addressForm">
+      <label for="addressInput">Adresse (Paris) :</label>
+      <div class="input-group">
+        <input id="addressInput" name="address" type="text" placeholder="Ex: 5 avenue Anatole France" required>
+        <button type="submit">Localiser</button>
+      </div>
+      <p class="hint">Ton adresse est localisée via Nominatim (OpenStreetMap).</p>
+    </form>
+
+    <div class="filters">
+      <h3>Types de services</h3>
+      <div class="filter-list">
+        {% for service in service_types %}
+          <label>
+            <input type="checkbox" name="serviceFilters" value="{{ service }}" checked>
+            {{ service|capitalize }}
+          </label>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="nearby-results">
+      <h3>Points à proximité</h3>
+      <ul id="nearbyList">
+        <li>Entre ton adresse pour voir les services les plus proches.</li>
+      </ul>
+    </div>
+    <p id="mapStatus" class="status" aria-live="polite"></p>
+  </aside>
+
+  <div id="map" role="application" aria-label="Carte des services gratuits"></div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  window.APP_CONFIG = {
+    defaultCenter: {{ default_center|tojson }},
+    serviceTypes: {{ service_types|tojson }}
+  };
+</script>
+<script src="{{ url_for('static', filename='js/map.js') }}"></script>
+{% endblock %}

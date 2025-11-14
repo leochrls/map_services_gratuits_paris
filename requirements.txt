@@ -1,0 +1,8 @@
+flask==3.0.3
+python-dotenv==1.0.1
+pymongo==4.10.1
+pandas==2.2.3
+requests==2.32.3
+folium==0.17.0
+geopandas==1.0.1
+gunicorn==23.0.0
