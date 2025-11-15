@@ -44,5 +44,10 @@
     serviceTypes: {{ service_types|tojson }}
   };
 </script>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+
 <script src="{{ url_for('static', filename='js/map.js') }}"></script>
 {% endblock %}
